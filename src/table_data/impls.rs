@@ -36,20 +36,6 @@ impl From<f64> for OwnedTableData {
     }
 }
 
-// impl<'a, T> From<&'a T> for &'a OwnedTableData
-// where T: Into<OwnedTableData> {
-//     fn from(t: &'a T) -> Self {
-//         t.into()
-//     }
-// }
-
-// impl<'a, T> From<&'a mut T> for &mut OwnedTableData
-// where T: Into<OwnedTableData> {
-//     fn from(t: &'a mut T) -> Self {
-//         t.into()
-//     }
-// }
-
 // panicking is not a good idea here
 // but i'll figure it out later
 impl AsRef<f64> for OwnedTableData {
@@ -159,5 +145,3 @@ impl AsMut<str> for OwnedTableData {
         }
     }
 }
-
-

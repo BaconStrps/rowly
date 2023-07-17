@@ -79,11 +79,11 @@ impl VecColumn {
         })
     }
 
-    pub fn iter<'a>(&'a self) -> Iter<'a, OwnedTableData> {
+    pub fn iter(&self) -> Iter<'_, OwnedTableData> {
         self.data.iter()
     }
 
-    pub fn iter_mut<'a>(&'a mut self) -> IterMut<'a, OwnedTableData> {
+    pub fn iter_mut(&mut self) -> IterMut<'_, OwnedTableData> {
         self.data.iter_mut()
     }
 }
@@ -148,7 +148,7 @@ where
         I: Iterator<Item = &'a OwnedTableData>,
     {
         ImmutColumnIter {
-            data: iterator.map(|v| v.into()).collect(),
+            data: iterator.collect(),
             phantom: std::marker::PhantomData,
         }
     }
