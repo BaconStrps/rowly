@@ -6,7 +6,6 @@ use crate::table_data::OwnedTableData;
 use super::row::ImmutRow;
 use super::row::MutRow;
 
-use super::row::MutableRows;
 #[derive(Debug, Clone)]
 pub struct ImmutVecRows<'a> {
     columns: Vec<Iter<'a, OwnedTableData>>,

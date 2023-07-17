@@ -1,7 +1,3 @@
-// issue:
-// how the fuck do i get this to return something properly
-// such that i can have multiple Column trait objects which return different data.
-
 use std::{
     collections::VecDeque,
     slice::{Iter, IterMut},
